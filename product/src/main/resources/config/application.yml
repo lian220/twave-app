@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: local
+  config:
+    location: classpath:/,classpath:/config/  # 경로 수정
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  output:
+    ansi:
+      enabled: always
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: false
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+springdoc:
+  packages-to-scan: lian.sample.presentation
+  swagger-ui:
+    doc-expansion: none
+    tagsSorter: alpha
+    enabled: true
+  api-docs:
+    enabled: true
+
+logging.config: classpath:log4j2.xml
+
+

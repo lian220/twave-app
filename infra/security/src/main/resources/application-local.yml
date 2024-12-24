@@ -1,0 +1,4 @@
+jwt:
+  secret-key : ${SECRET_KEY}
+  access-token-expire-time : 300
+  refresh-token-expire-time : 7200
